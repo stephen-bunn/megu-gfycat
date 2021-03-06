@@ -269,7 +269,7 @@ def iter_content(url: Url, token: str, secret: str) -> Generator[Content, None, 
             data = gfycat_content[content_entry.type]
 
             yield Content(
-                id=build_content_id(gfycat_id),
+                id=build_content_id(gfycat_item["gfyName"]),
                 url=gfycat_url,
                 size=data["size"],
                 type=content_entry.mimetype,
