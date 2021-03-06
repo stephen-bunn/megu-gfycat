@@ -106,7 +106,7 @@ def iter_content(url: Url) -> Generator[Content, None, None]:
                 continue
 
             yield Content(
-                id=build_content_id(gfycat_id, content_entry.type),
+                id=build_content_id(gfycat_id),
                 url=url.url,
                 size=int(response.headers.get("content-length", 0)),
                 type=content_entry.mimetype,

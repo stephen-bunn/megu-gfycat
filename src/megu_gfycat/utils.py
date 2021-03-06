@@ -7,22 +7,19 @@
 from megu import Url
 
 
-def build_content_id(gfycat_id: str, type_key: str) -> str:
+def build_content_id(gfycat_id: str) -> str:
     """Build an appropriate content identification string.
 
     Args:
         gfycat_id (str):
             The ID of the gfycat content we discovered.
-        type_key (str):
-            The content type (group) ID for the content we discovered.
-            This is something like ``mp4`` vs ``webm``.
 
     Returns:
         str:
             The appropriate content identifier.
     """
 
-    return f"gfycat-{type_key!s}-{gfycat_id!s}"
+    return f"gfycat-{gfycat_id!s}"
 
 
 def get_gfycat_id(url: Url) -> str:
