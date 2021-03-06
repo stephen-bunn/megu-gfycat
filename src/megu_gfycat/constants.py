@@ -14,10 +14,11 @@ ENV_API_SECRET = "MEGU_GFYCAT_API_SECRET"
 
 # URL patterns that we know how to handle
 BASIC_PATTERN = re.compile(
-    r"^https:?://(?:www\.)?gfycat\.com/(?:gifs/detail)?(?P<id>[a-zA-Z]+)/?$"
+    r"^https:?://(?:www\.)?gfycat\.com/(?:gifs/detail)?"
+    r"(?P<id>[a-zA-Z]+)[a-zA-Z0-9-]*/?$"
 )
 RAW_PATTERN = re.compile(
-    r"^https:?://[a-z]+\.gfycat\.com/(?P<id>[a-zA-Z]+)\.[a-zA-Z0-9]+$"
+    r"^https:?://[a-z]+\.gfycat\.com/(?P<id>[a-zA-Z]+)[a-zA-Z0-9_-]*\.[a-zA-Z0-9]+$"
 )
 VALID_PATTERNS: Set[Pattern] = {BASIC_PATTERN, RAW_PATTERN}
 
