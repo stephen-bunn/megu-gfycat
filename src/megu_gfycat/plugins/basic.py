@@ -19,7 +19,7 @@ class GfycatBasicPlugin(BasePlugin):
     This plugin does not attempt to iterate over multiple items in any way.
     """
 
-    name = "Gfycat Plugin"
+    name = "Gfycat Basic"
     domains = {"gfycat.com"}
 
     def can_handle(self, url: Url) -> bool:
