@@ -2,11 +2,8 @@
 # Copyright (c) 2021 Stephen Bunn <stephen@bunn.io>
 # ISC License <https://choosealicense.com/licenses/isc>
 
-"""Megu Gfycat.
+"""Contains the exports for Megu plugins supplied by this package."""
 
-The pre-built Megu plugin for extracting content from Gfycat.com.
-"""
-
-from .plugins import GfycatBasicPlugin
+from .basic import GfycatBasicPlugin
 
 __all__ = ["GfycatBasicPlugin"]
