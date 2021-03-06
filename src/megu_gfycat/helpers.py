@@ -8,6 +8,7 @@ import os
 from typing import Generator, Optional, Tuple
 
 from megu import Content, Url
+from megu.log import instance as log
 
 from .api import iter_content as iter_gfycat_content
 from .constants import ENV_API_ENABLED, ENV_API_SECRET, ENV_API_TOKEN, VALID_PATTERNS
@@ -105,7 +106,9 @@ def get_content_iterator(url: Url) -> Generator[Content, None, None]:
         Generator[~megu.Content, None, None]:
             A content generator for the given URL.
     """
+
     if is_api_enabled():
+        log.debug(f"Using the API logic for fetching Gfycat items for {url}")
         api_tokens = get_api_tokens()
         if api_tokens is None:
             raise RuntimeError(
@@ -115,4 +118,5 @@ def get_content_iterator(url: Url) -> Generator[Content, None, None]:
 
         return iter_gfycat_content(url, *api_tokens)
     else:
+        log.debug(f"Using the guesswork logic for fetching Gfycat items for {url}")
         return iter_guessed_content(url)
