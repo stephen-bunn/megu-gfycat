@@ -20,7 +20,7 @@ class GfycatBasicPlugin(BasePlugin):
     """
 
     name = "Gfycat Basic"
-    domains = {"gfycat.com"}
+    domains = {"gfycat.com", "www.gfycat.com"}
 
     def can_handle(self, url: Url) -> bool:
         """Determine if the given URL can be handled by the current plugin.
