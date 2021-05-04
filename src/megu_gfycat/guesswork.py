@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # Copyright (c) 2021 Stephen Bunn <stephen@bunn.io>
-# ISC License <https://choosealicense.com/licenses/isc>
+# GPLv3 License <https://choosealicense.com/licenses/gpl-3.0/>
 
 """Contains the functionality for guessing content endpoints."""
 
@@ -107,6 +107,7 @@ def iter_content(url: Url) -> Generator[Content, None, None]:
 
             yield Content(
                 id=build_content_id(gfycat_id),
+                name=content_entry.name,
                 url=url.url,
                 size=int(response.headers.get("content-length", 0)),
                 type=content_entry.mimetype,

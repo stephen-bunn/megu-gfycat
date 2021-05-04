@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # Copyright (c) 2021 Stephen Bunn <stephen@bunn.io>
-# ISC License <https://choosealicense.com/licenses/isc>
+# GPLv3 License <https://choosealicense.com/licenses/gpl-3.0/>
 
 """Contains the functionality for fetching content via the Gfycat API."""
 
@@ -270,6 +270,7 @@ def iter_content(url: Url, token: str, secret: str) -> Generator[Content, None, 
 
             yield Content(
                 id=build_content_id(gfycat_item["gfyName"]),
+                name=content_entry.name,
                 url=gfycat_url,
                 size=data["size"],
                 type=content_entry.mimetype,

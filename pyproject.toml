@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Megu extractor plugin for Gfycat.com"
 authors = ["Stephen Bunn <stephen@bunn.io>"]
 maintainers = []
-license = "ISC"
+license = "GPL-3.0-or-later"
 packages = [
   { include = "megu_gfycat", from = "src" }
 ]
@@ -23,7 +23,7 @@ keywords = [
   "gfycat"
 ]
 classifiers = [
-  "License :: OSI Approved :: ISC License (ISCL)",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Operating System :: POSIX",
