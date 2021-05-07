@@ -111,6 +111,7 @@ def iter_content(url: Url) -> Generator[Content, None, None]:
                 url=url.url,
                 size=int(response.headers.get("content-length", 0)),
                 type=content_entry.mimetype,
+                extension=content_entry.extension,
                 quality=content_entry.quality,
                 resources=[HttpResource(method=HttpMethod.GET, url=content_url)],
                 meta=gfycat_meta,

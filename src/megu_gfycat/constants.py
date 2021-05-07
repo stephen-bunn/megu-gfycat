@@ -31,6 +31,7 @@ class ContentEntry(NamedTuple):
 
     name: str
     type: str
+    extension: str
     mimetype: str
     quality: float
     url_template: str
@@ -40,6 +41,7 @@ CONTENT_ENTRIES: List[ContentEntry] = [
     ContentEntry(
         name="MP4 Video",
         type="mp4",
+        extension=".mp4",
         mimetype="video/mp4",
         quality=1.0,
         url_template="https://giant.gfycat.com/{id}.mp4",
@@ -47,6 +49,7 @@ CONTENT_ENTRIES: List[ContentEntry] = [
     ContentEntry(
         name="WEBM Video",
         type="webm",
+        extension=".webm",
         mimetype="video/webm",
         quality=0.5,
         url_template="https://giant.gfycat.com/{id}.webm",
@@ -54,6 +57,7 @@ CONTENT_ENTRIES: List[ContentEntry] = [
     ContentEntry(
         name="5MB Gif Image",
         type="max5mbGif",
+        extension=".gif",
         mimetype="image/gif",
         quality=0.25,
         url_template="https://thumbs.gfycat.com/{id}-size_restricted.gif",
@@ -61,6 +65,7 @@ CONTENT_ENTRIES: List[ContentEntry] = [
     ContentEntry(
         name="2MB Gif Image",
         type="max2mbGif",
+        extension=".gif",
         mimetype="image/gif",
         quality=0.10,
         url_template="https://thumbs.gfycat.com/{id}-small.gif",
@@ -68,6 +73,7 @@ CONTENT_ENTRIES: List[ContentEntry] = [
     ContentEntry(
         name="1MB Gift Image",
         type="max1mbGif",
+        extension=".gif",
         mimetype="image/gif",
         quality=0.05,
         url_template="https://thumbs.gfycat.com/{id}-max-1mb.gif",
